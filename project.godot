@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Paw Paw Warriors"
+run/main_scene="res://assets/scenes/Main.tscn"
 config/icon="res://icon.png"
 
 [rendering]
