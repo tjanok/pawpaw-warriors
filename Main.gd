@@ -32,7 +32,12 @@ func _on_MobTimer_timeout():
 	# Set the mob's direction perpendicular to the path direction.
 	var direction = $MobPath/MobSpawnLocation.rotation + PI / 2
 	# Set the mob's position to a random location.
-	mob.get_node("RigidBody2D").position = $MobPath/MobSpawnLocation.position
+	var pos = Vector2( 1000, 500 );
+	pos = $StartPosition.position
+	#pos.x = rand_range( 0, get_viewport().get_visible_rect().size.x-16);
+	#pos.y = rand_range( 0, get_viewport().get_visible_rect().size.y );
+	
+	mob.position = $MobPath/MobSpawnLocation.position
 	# Add some randomness to the direction.
 	direction += rand_range(-PI / 4, PI / 4)
 	mob.get_node("RigidBody2D").rotation = direction
